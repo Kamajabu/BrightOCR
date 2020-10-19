@@ -17,3 +17,18 @@ final class MainStore {
             return nil
         }
     }()
+    
+    func persistOCRResultModel(_ model: OCRResultModel) {
+        let context = coreDataStack.managedObjectContext
+        _ = OCRResult(in: context, model: model)
+        coreDataStack.saveContext()
+    }
+    
+    func loadOCRResults() -> [OCRResultModel] {
+        guard let results = try? coreDataStack.loadEntity(entity: OCRResult.self) else {
+            return []
+        }
+        
+        return results.compactMap { try? OCRResultModel($0) }
+    }
+}
