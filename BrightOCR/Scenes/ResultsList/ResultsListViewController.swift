@@ -17,6 +17,8 @@ private extension ResultsListViewController {
 
 final class ResultsListViewController: UIViewController {
     
+    weak var router: ResultsListRouter?
+    
     private let viewModel: ResultsListViewModel
     private let tableView = UITableView()
     
