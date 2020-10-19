@@ -58,6 +58,11 @@ final class ResultsListViewModel {
         }
     }
     
+    func deleteRecord(id: UUID) {
+        resultsHistory.removeAll { $0.id == id }
+        store.deleteRecord(id: id)
+    }
+    
     private func addModelToHistoryList(_ model: OCRResultModel) {
         resultsHistory.append(model)
     }
