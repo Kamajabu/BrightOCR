@@ -10,5 +10,5 @@ import Foundation
 struct OCRResultModel {
     let id: UUID
     let createdOn: Date
-    let ocrResult: String?
+    let ocrText: String?
 }

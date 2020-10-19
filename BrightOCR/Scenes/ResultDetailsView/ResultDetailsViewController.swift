@@ -53,7 +53,7 @@ final class ResultDetailsViewController: UIViewController {
         titleDateLabel.text = DateFormatter.localizedString(from: viewModel.result.createdOn, dateStyle: .full, timeStyle: .medium)
         inputImage.image = viewModel.image
 
-        resultTextView.text = viewModel.result.ocrResult
+        resultTextView.text = viewModel.result.ocrText
 
     }
     

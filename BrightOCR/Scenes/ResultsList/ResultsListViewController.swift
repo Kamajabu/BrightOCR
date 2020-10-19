@@ -121,7 +121,7 @@ extension ResultsListViewController: UITableViewDataSource, UITableViewDelegate 
         
         cell.textLabel?.text = DateFormatter.localizedString(from: historyRecord.createdOn, dateStyle: .medium, timeStyle: .medium)
         
-        cell.detailTextLabel?.text = historyRecord.ocrResult
+        cell.detailTextLabel?.text = historyRecord.ocrText
         
         return cell
     }
