@@ -21,6 +21,10 @@ final class ApplicationCoordinator: Coordinator {
         rootViewController = UINavigationController()
         rootViewController.navigationBar.prefersLargeTitles = false
         
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.tintColor = UIColor.adaptedColor(light: .prussianBlue, dark: .white)
+        navigationBarAppearace.barTintColor = UIColor.barBackground
+        
         resultsListCoordinator = ResultsListCoordinator(parentViewController: rootViewController, mainStore: mainStore)
         resultsListCoordinator.start()
     }
