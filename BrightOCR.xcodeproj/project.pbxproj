@@ -22,6 +22,7 @@
 		4A4748F2253DBFE100FAB0E0 /* ResultDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748F1253DBFE100FAB0E0 /* ResultDetailsViewModel.swift */; };
 		4A4748F6253DC26800FAB0E0 /* FirebaseMLKitOCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748F5253DC26800FAB0E0 /* FirebaseMLKitOCR.swift */; };
 		4A4748F9253DC30E00FAB0E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A4748F8253DC30E00FAB0E0 /* GoogleService-Info.plist */; };
+		4A474914253DC59500FAB0E0 /* OCRResultData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A474912253DC59500FAB0E0 /* OCRResultData.xcdatamodeld */; };
 		B1810F77461B81EC2AA60C47 /* Pods_BrightOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FC9F0BF611EB3027CD7ECB /* Pods_BrightOCR.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		4A4748F1253DBFE100FAB0E0 /* ResultDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailsViewModel.swift; sourceTree = "<group>"; };
 		4A4748F5253DC26800FAB0E0 /* FirebaseMLKitOCR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMLKitOCR.swift; sourceTree = "<group>"; };
 		4A4748F8253DC30E00FAB0E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4A474913253DC59500FAB0E0 /* OCRResultData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OCRResultData.xcdatamodel; sourceTree = "<group>"; };
 		934C7590FA25E1A131B0EF31 /* Pods-BrightOCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrightOCR.debug.xcconfig"; path = "Target Support Files/Pods-BrightOCR/Pods-BrightOCR.debug.xcconfig"; sourceTree = "<group>"; };
 		952538D8731B64A2BB08EA07 /* Pods-BrightOCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrightOCR.release.xcconfig"; path = "Target Support Files/Pods-BrightOCR/Pods-BrightOCR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				4A4748E6253D810D00FAB0E0 /* OCRResultModel.swift */,
+				4A474912253DC59500FAB0E0 /* OCRResultData.xcdatamodeld */,
 			);
 			path = Persistance;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				4A4748F6253DC26800FAB0E0 /* FirebaseMLKitOCR.swift in Sources */,
 				4A4748F2253DBFE100FAB0E0 /* ResultDetailsViewModel.swift in Sources */,
 				4A03DE55253D742A00912ED1 /* AppDelegate.swift in Sources */,
+				4A474914253DC59500FAB0E0 /* OCRResultData.xcdatamodeld in Sources */,
 				4A4748E7253D810D00FAB0E0 /* OCRResultModel.swift in Sources */,
 				4A4748D4253D7DE200FAB0E0 /* Coordinator.swift in Sources */,
 				4A4748DC253D7FC700FAB0E0 /* ResultsListViewController.swift in Sources */,
@@ -534,6 +538,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4A474912253DC59500FAB0E0 /* OCRResultData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4A474913253DC59500FAB0E0 /* OCRResultData.xcdatamodel */,
+			);
+			currentVersion = 4A474913253DC59500FAB0E0 /* OCRResultData.xcdatamodel */;
+			path = OCRResultData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4A03DE49253D742A00912ED1 /* Project object */;
 }
