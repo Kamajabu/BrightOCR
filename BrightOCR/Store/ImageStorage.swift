@@ -34,6 +34,11 @@ final class ImageStorage {
         _ = fileManager.createFile(atPath: filePath, contents: data, attributes: nil)
     }
     
+    func removeImage(for key: UUID) throws {
+        let filePath = makeFilePath(for: key.uuidString)
+        try fileManager.removeItem(atPath: filePath)
+    }
+    
     func image(for key: UUID) throws -> UIImage {
         let filePath = makeFilePath(for: key.uuidString)
         let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
