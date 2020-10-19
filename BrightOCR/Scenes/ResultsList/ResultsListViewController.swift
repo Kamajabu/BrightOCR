@@ -131,9 +131,13 @@ extension ResultsListViewController: UITableViewDataSource, UITableViewDelegate 
         }
         
         cell.textLabel?.text = DateFormatter.localizedString(from: historyRecord.createdOn, dateStyle: .medium, timeStyle: .medium)
+        cell.textLabel?.numberOfLines = 1
         
         cell.detailTextLabel?.text = historyRecord.ocrText
+        cell.detailTextLabel?.alpha = 0.7
+        cell.detailTextLabel?.numberOfLines = 4
         
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
