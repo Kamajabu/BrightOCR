@@ -5,6 +5,8 @@
 //  Created by Kamajabu on 19/10/2020.
 //
 
+import Foundation
+
 final class MainStore {
     
     private(set) lazy var coreDataStack: CoreDataStack = CoreDataStack()
@@ -13,15 +15,13 @@ final class MainStore {
         do {
             return try ImageStorage()
         } catch {
-            // TODO: Replace with logger
+            // TODO: Add logger
             return nil
         }
     }()
     
     func persistOCRResultModel(_ model: OCRResultModel) {
-        let context = coreDataStack.managedObjectContext
-        _ = OCRResult(in: context, model: model)
-        coreDataStack.saveContext()
+        coreDataStack.saveOCRResult(model)
     }
     
     func loadOCRResults() -> [OCRResultModel] {
@@ -30,5 +30,14 @@ final class MainStore {
         }
         
         return results.compactMap { try? OCRResultModel($0) }
+    }
+    
+    func deleteRecord(id: UUID) {
+        do {
+            try imageStorage?.removeImage(for: id)
+            coreDataStack.removeEntity(entity: OCRResult.self, id: id)
+        } catch {
+            // TODO: Add logger
+        }
     }
 }
