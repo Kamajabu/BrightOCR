@@ -151,4 +151,21 @@ extension ResultsListViewController: UITableViewDataSource, UITableViewDelegate 
         router?.showResult(for: historyRecord)
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else {
+            return
+        }
+        
+        guard let historyRecord = viewModel.historyRecord(for: indexPath.row) else {
+            return
+        }
+        
+        viewModel.deleteRecord(id: historyRecord.id)
+        tableView.reloadData()
+    }
+    
 }
