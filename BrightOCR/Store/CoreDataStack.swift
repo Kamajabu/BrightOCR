@@ -9,7 +9,7 @@ import CoreData
 
 extension CoreDataStack {
     struct Const {
-        static let containerName = "OCRImagesData"
+        static let containerName = "OCRResultData"
     }
 }
 
