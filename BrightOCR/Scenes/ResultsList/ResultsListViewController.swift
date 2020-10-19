@@ -81,7 +81,6 @@ final class ResultsListViewController: UIViewController {
     @objc func addPhoto() {
         cameraController.selectSourceAlert()
     }
-    
 
 }
 
@@ -89,10 +88,16 @@ extension ResultsListViewController: UINavigationControllerDelegate, UIImagePick
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         picker.dismiss(animated: true)
         
-        guard let image = info[.editedImage] as? UIImage else {
+        guard let image = info[.originalImage] as? UIImage else {
             // Add logger
             return
         }
+        
+        let result = OCRResultModel(id: UUID(), createdOn: Date(), ocrResult: "test")
+        
+        let viewModel = ResultDetailsViewModel(result: result, image: image)
+        let viewController = ResultDetailsViewController(viewModel: viewModel)
+        present(viewController, animated: true)
     }
 }
 

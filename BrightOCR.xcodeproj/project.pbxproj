@@ -18,6 +18,8 @@
 		4A4748E2253D800400FAB0E0 /* ResultsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748E1253D800400FAB0E0 /* ResultsListCoordinator.swift */; };
 		4A4748E7253D810D00FAB0E0 /* OCRResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748E6253D810D00FAB0E0 /* OCRResultModel.swift */; };
 		4A4748EA253DBC3500FAB0E0 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748E9253DBC3500FAB0E0 /* CameraController.swift */; };
+		4A4748EF253DBFC700FAB0E0 /* ResultDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748EE253DBFC700FAB0E0 /* ResultDetailsViewController.swift */; };
+		4A4748F2253DBFE100FAB0E0 /* ResultDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748F1253DBFE100FAB0E0 /* ResultDetailsViewModel.swift */; };
 		B1810F77461B81EC2AA60C47 /* Pods_BrightOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FC9F0BF611EB3027CD7ECB /* Pods_BrightOCR.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		4A4748E1253D800400FAB0E0 /* ResultsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsListCoordinator.swift; sourceTree = "<group>"; };
 		4A4748E6253D810D00FAB0E0 /* OCRResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultModel.swift; sourceTree = "<group>"; };
 		4A4748E9253DBC3500FAB0E0 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		4A4748EE253DBFC700FAB0E0 /* ResultDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailsViewController.swift; sourceTree = "<group>"; };
+		4A4748F1253DBFE100FAB0E0 /* ResultDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailsViewModel.swift; sourceTree = "<group>"; };
 		934C7590FA25E1A131B0EF31 /* Pods-BrightOCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrightOCR.debug.xcconfig"; path = "Target Support Files/Pods-BrightOCR/Pods-BrightOCR.debug.xcconfig"; sourceTree = "<group>"; };
 		952538D8731B64A2BB08EA07 /* Pods-BrightOCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrightOCR.release.xcconfig"; path = "Target Support Files/Pods-BrightOCR/Pods-BrightOCR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +109,7 @@
 		4A4748D9253D7F9100FAB0E0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4A4748ED253DBFAE00FAB0E0 /* ResultDetailsView */,
 				4A4748DA253D7FB400FAB0E0 /* ResultsList */,
 			);
 			path = Scenes;
@@ -127,6 +132,15 @@
 				4A4748E6253D810D00FAB0E0 /* OCRResultModel.swift */,
 			);
 			path = Persistance;
+			sourceTree = "<group>";
+		};
+		4A4748ED253DBFAE00FAB0E0 /* ResultDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				4A4748EE253DBFC700FAB0E0 /* ResultDetailsViewController.swift */,
+				4A4748F1253DBFE100FAB0E0 /* ResultDetailsViewModel.swift */,
+			);
+			path = ResultDetailsView;
 			sourceTree = "<group>";
 		};
 		89B12FA29360532F0BA82DB0 /* Pods */ = {
@@ -281,11 +295,13 @@
 				4A4748EA253DBC3500FAB0E0 /* CameraController.swift in Sources */,
 				4A4748D0253D7DA500FAB0E0 /* MainStore.swift in Sources */,
 				4A4748E2253D800400FAB0E0 /* ResultsListCoordinator.swift in Sources */,
+				4A4748F2253DBFE100FAB0E0 /* ResultDetailsViewModel.swift in Sources */,
 				4A03DE55253D742A00912ED1 /* AppDelegate.swift in Sources */,
 				4A4748E7253D810D00FAB0E0 /* OCRResultModel.swift in Sources */,
 				4A4748D4253D7DE200FAB0E0 /* Coordinator.swift in Sources */,
 				4A4748DC253D7FC700FAB0E0 /* ResultsListViewController.swift in Sources */,
 				4A4748D7253D7E4600FAB0E0 /* ApplicationCoordinator.swift in Sources */,
+				4A4748EF253DBFC700FAB0E0 /* ResultDetailsViewController.swift in Sources */,
 				4A4748DF253D7FD200FAB0E0 /* ResultsListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
