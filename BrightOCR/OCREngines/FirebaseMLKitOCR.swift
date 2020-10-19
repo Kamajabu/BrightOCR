@@ -11,7 +11,7 @@ import MLKit
 
 class FirebaseMLKitOCR {
     
-    typealias OCRResultBlock = (Result<String?, Error>)->Void
+    typealias OCRResultBlock = (Result<String?, Error>) -> Void
     
     func performOCR(on image: UIImage, completion: @escaping OCRResultBlock) {
         let textRecognizer = TextRecognizer.textRecognizer()

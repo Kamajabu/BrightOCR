@@ -93,11 +93,18 @@ extension ResultsListViewController: UINavigationControllerDelegate, UIImagePick
             return
         }
         
-        let result = OCRResultModel(id: UUID(), createdOn: Date(), ocrResult: "test")
+        viewModel.analyze(image: image) { [weak self] result in
+            guard case let .success(model) = result else {
+                return
+            }
+            
+            self?.tableView.reloadData()
+            
+            let viewModel = ResultDetailsViewModel(result: model, image: image)
+            let viewController = ResultDetailsViewController(viewModel: viewModel)
+            self?.present(viewController, animated: true)
+        }
         
-        let viewModel = ResultDetailsViewModel(result: result, image: image)
-        let viewController = ResultDetailsViewController(viewModel: viewModel)
-        present(viewController, animated: true)
     }
 }
 
