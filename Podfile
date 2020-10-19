@@ -6,4 +6,7 @@ target 'BrightOCR' do
 
   pod 'EasyPeasy', '~> 1.9'
   pod 'SwiftLint'
+
+  pod 'Firebase/Analytics'
+  pod 'GoogleMLKit/TextRecognition'
 end
