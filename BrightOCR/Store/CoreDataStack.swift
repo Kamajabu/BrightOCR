@@ -15,7 +15,35 @@ extension CoreDataStack {
 
 final class CoreDataStack {
     
-    var managedObjectContext: NSManagedObjectContext {
+    func saveOCRResult(_ model: OCRResultModel) {
+        _ = OCRResult(in: managedObjectContext, model: model)
+        saveContext()
+    }
+    
+    func loadEntity<T: NSManagedObject>(entity: T.Type, uuid: String? = nil) throws -> [T] {
+        let fetchRequest = NSFetchRequest<T>(entityName: String(describing: entity))
+        
+        if let definedId = uuid {
+            fetchRequest.predicate = NSPredicate(format: "id == %@", definedId)
+        }
+        
+        return try managedObjectContext.fetch(fetchRequest)
+    }
+    
+    func removeEntity<T: NSManagedObject>(entity: T.Type, id: UUID) {
+        guard let matchingEntities = try? loadEntity(entity: entity, uuid: id.uuidString) else {
+            return
+        }
+        
+        guard let record = matchingEntities.first else {
+            return
+        }
+        
+        managedObjectContext.delete(record)
+        saveContext()
+    }
+    
+    private var managedObjectContext: NSManagedObjectContext {
         return self.persistentContainer.viewContext
     }
     
@@ -29,7 +57,7 @@ final class CoreDataStack {
         return container
     }()
     
-    func saveContext() {
+    private func saveContext() {
         self.managedObjectContext.perform {
             if self.managedObjectContext.hasChanges {
                 do {
@@ -39,16 +67,6 @@ final class CoreDataStack {
                 }
             }
         }
-    }
-    
-    func loadEntity<T: NSManagedObject>(entity: T.Type, uuid: String? = nil) throws -> [T] {
-        let fetchRequest = NSFetchRequest<T>(entityName: String(describing: entity))
-        
-        if let definedId = uuid {
-            fetchRequest.predicate = NSPredicate(format: "id == %@", definedId)
-        }
-        
-        return try managedObjectContext.fetch(fetchRequest)
     }
 
 }
