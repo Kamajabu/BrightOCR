@@ -7,15 +7,20 @@
 
 import CoreData
 
-final class CoreDataStack {
-    private static let containerName = "OCRImagesData"
+extension CoreDataStack {
+    struct Const {
+        static let containerName = "OCRImagesData"
+    }
+}
 
+final class CoreDataStack {
+    
     var managedObjectContext: NSManagedObjectContext {
         return self.persistentContainer.viewContext
     }
-
-   private  lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: CoreDataStack.containerName)
+    
+    private  lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: Const.containerName)
         container.loadPersistentStores(completionHandler: { _, error in
             if let error = error as NSError? {
                 // Add logger
