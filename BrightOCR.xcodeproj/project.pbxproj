@@ -12,6 +12,7 @@
 		4A03DE61253D742C00912ED1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A03DE5F253D742C00912ED1 /* LaunchScreen.storyboard */; };
 		4A4748D0253D7DA500FAB0E0 /* MainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748CF253D7DA500FAB0E0 /* MainStore.swift */; };
 		4A4748D4253D7DE200FAB0E0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748D3253D7DE200FAB0E0 /* Coordinator.swift */; };
+		4A4748D7253D7E4600FAB0E0 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748D6253D7E4600FAB0E0 /* ApplicationCoordinator.swift */; };
 		B1810F77461B81EC2AA60C47 /* Pods_BrightOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FC9F0BF611EB3027CD7ECB /* Pods_BrightOCR.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		4A03DE62253D742C00912ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A4748CF253D7DA500FAB0E0 /* MainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStore.swift; sourceTree = "<group>"; };
 		4A4748D3253D7DE200FAB0E0 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4A4748D6253D7E4600FAB0E0 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		934C7590FA25E1A131B0EF31 /* Pods-BrightOCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrightOCR.debug.xcconfig"; path = "Target Support Files/Pods-BrightOCR/Pods-BrightOCR.debug.xcconfig"; sourceTree = "<group>"; };
 		952538D8731B64A2BB08EA07 /* Pods-BrightOCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrightOCR.release.xcconfig"; path = "Target Support Files/Pods-BrightOCR/Pods-BrightOCR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				4A4748CF253D7DA500FAB0E0 /* MainStore.swift */,
+				4A4748D6253D7E4600FAB0E0 /* ApplicationCoordinator.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				4A4748D0253D7DA500FAB0E0 /* MainStore.swift in Sources */,
 				4A03DE55253D742A00912ED1 /* AppDelegate.swift in Sources */,
 				4A4748D4253D7DE200FAB0E0 /* Coordinator.swift in Sources */,
+				4A4748D7253D7E4600FAB0E0 /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
