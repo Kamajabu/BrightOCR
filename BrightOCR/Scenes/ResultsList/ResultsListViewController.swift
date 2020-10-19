@@ -112,14 +112,16 @@ extension ResultsListViewController: UINavigationControllerDelegate, UIImagePick
 
 extension ResultsListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.resultsMockData.count
+        return viewModel.resultsHistory.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle,
                                    reuseIdentifier: Const.basicCellIdentifier)
         
-        let historyRecord = viewModel.resultsMockData[indexPath.row]
+        guard let historyRecord = viewModel.historyRecord(for: indexPath.row) else {
+            return cell
+        }
         
         cell.textLabel?.text = DateFormatter.localizedString(from: historyRecord.createdOn, dateStyle: .medium, timeStyle: .medium)
         
