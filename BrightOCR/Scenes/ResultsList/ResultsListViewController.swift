@@ -59,11 +59,19 @@ final class ResultsListViewController: UIViewController {
     }
     
     private func addSubviews() {
+        self.view.addSubview(addPhotoButton)
         self.view.addSubview(tableView)
     }
     
     private func setupLayout() {
-        tableView.easy.layout(Edges())
+        addPhotoButton.easy.layout(CenterX(),
+                                   Bottom(20).to(view.safeAreaLayoutGuide, .bottom),
+                                   Height(Const.addButtonSize.height),
+                                   Width(Const.addButtonSize.width))
+        
+        tableView.easy.layout(Edges(),
+                              Top(20).to(view.safeAreaLayoutGuide, .top),
+                              Bottom(20).to(addPhotoButton, .top))
     }
 
 }
