@@ -5,4 +5,8 @@
 //  Created by Kamajabu on 19/10/2020.
 //
 
-class MainStore { }
+final class MainStore {
+    
+    private(set) lazy var coreDataStack: CoreDataStack = CoreDataStack()
+    
+}
