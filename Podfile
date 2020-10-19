@@ -2,9 +2,8 @@
 platform :ios, '12.0'
 
 target 'BrightOCR' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for BrightOCR
+  pod 'EasyPeasy', '~> 1.9'
 
 end
