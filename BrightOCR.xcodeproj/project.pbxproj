@@ -26,6 +26,7 @@
 		4A474924253DC66900FAB0E0 /* OCRResult+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A474923253DC66800FAB0E0 /* OCRResult+CoreDataClass.swift */; };
 		4A474925253DC66900FAB0E0 /* OCRResult+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A474922253DC66800FAB0E0 /* OCRResult+CoreDataProperties.swift */; };
 		4A47492A253DC7B600FAB0E0 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A474929253DC7B600FAB0E0 /* CoreDataStack.swift */; };
+		4A47492D253DC96200FAB0E0 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A47492C253DC96200FAB0E0 /* ImageStorage.swift */; };
 		B1810F77461B81EC2AA60C47 /* Pods_BrightOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FC9F0BF611EB3027CD7ECB /* Pods_BrightOCR.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		4A474922253DC66800FAB0E0 /* OCRResult+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OCRResult+CoreDataProperties.swift"; path = "/Users/Kamajabu/Documents/privateProjects/BrightOCR/clearRepo/BrightOCR/BrightOCR/Persistance/OCRResult+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		4A474923253DC66800FAB0E0 /* OCRResult+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OCRResult+CoreDataClass.swift"; path = "/Users/Kamajabu/Documents/privateProjects/BrightOCR/clearRepo/BrightOCR/BrightOCR/Persistance/OCRResult+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		4A474929253DC7B600FAB0E0 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		4A47492C253DC96200FAB0E0 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
 		934C7590FA25E1A131B0EF31 /* Pods-BrightOCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrightOCR.debug.xcconfig"; path = "Target Support Files/Pods-BrightOCR/Pods-BrightOCR.debug.xcconfig"; sourceTree = "<group>"; };
 		952538D8731B64A2BB08EA07 /* Pods-BrightOCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrightOCR.release.xcconfig"; path = "Target Support Files/Pods-BrightOCR/Pods-BrightOCR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 			children = (
 				4A4748CF253D7DA500FAB0E0 /* MainStore.swift */,
 				4A474929253DC7B600FAB0E0 /* CoreDataStack.swift */,
+				4A47492C253DC96200FAB0E0 /* ImageStorage.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				4A47492A253DC7B600FAB0E0 /* CoreDataStack.swift in Sources */,
 				4A4748E7253D810D00FAB0E0 /* OCRResultModel.swift in Sources */,
 				4A4748D4253D7DE200FAB0E0 /* Coordinator.swift in Sources */,
+				4A47492D253DC96200FAB0E0 /* ImageStorage.swift in Sources */,
 				4A4748DC253D7FC700FAB0E0 /* ResultsListViewController.swift in Sources */,
 				4A4748D7253D7E4600FAB0E0 /* ApplicationCoordinator.swift in Sources */,
 				4A474924253DC66900FAB0E0 /* OCRResult+CoreDataClass.swift in Sources */,
