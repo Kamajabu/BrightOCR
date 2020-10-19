@@ -11,12 +11,8 @@ final class ResultsListViewModel {
     
     private unowned let store: MainStore
     private let ocrEngine = FirebaseMLKitOCR()
-
-    let mock1 = OCRResultModel(id: UUID(), createdOn: Date(), ocrText: "Test 1")
-    let mock2 = OCRResultModel(id: UUID(), createdOn: Date(timeIntervalSince1970: 8547892146), ocrText: "Test 2")
-    let mock3 = OCRResultModel(id: UUID(), createdOn: Date(timeIntervalSince1970: 43242321), ocrText: "Test 3")
-
-    lazy var resultsMockData = [mock1, mock2, mock3]
+    
+    private(set) var resultsHistory: [OCRResultModel] = []
     
     init(store: MainStore) {
         self.store = store
