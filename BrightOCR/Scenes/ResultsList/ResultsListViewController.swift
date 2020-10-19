@@ -5,17 +5,19 @@
 //  Created by Kamajabu on 19/10/2020.
 //
 
-import UIKit
+import EasyPeasy
 
-class ResultsListViewController: UIViewController {
+private extension ResultsListViewController {
+    struct Const {
+        static let basicCellIdentifier = "resultsCell"
+    }
+}
+
+final class ResultsListViewController: UIViewController {
     
     private let viewModel: ResultsListViewModel
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    
+    private let tableView = UITableView()
     
     init(viewModel: ResultsListViewModel) {
         self.viewModel = viewModel
