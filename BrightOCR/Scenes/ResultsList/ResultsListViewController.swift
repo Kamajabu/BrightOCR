@@ -10,7 +10,9 @@ import EasyPeasy
 private extension ResultsListViewController {
     struct Const {
         static let addButtonSize = CGSize(width: 120, height: 44)
-
+        static let addButtonBorderColor = UIColor.adaptedColor(light: UIColor.prussianBlue, dark: .white)
+        static let defaultMargin: CGFloat = 20
+        
         static let basicCellIdentifier = "resultsCell"
     }
 }
@@ -73,19 +75,14 @@ final class ResultsListViewController: UIViewController {
     
     private func setupLayout() {
         addPhotoButton.easy.layout(CenterX(),
-                                   Bottom(20).to(view.safeAreaLayoutGuide, .bottom),
+                                   Bottom(Const.defaultMargin).to(view.safeAreaLayoutGuide, .bottom),
                                    Height(Const.addButtonSize.height),
                                    Width(Const.addButtonSize.width))
         
         tableView.easy.layout(Edges(),
-                              Top(20).to(view.safeAreaLayoutGuide, .top),
-                              Bottom(20).to(addPhotoButton, .top))
+                              Top(Const.defaultMargin).to(view.safeAreaLayoutGuide, .top),
+                              Bottom(Const.defaultMargin).to(addPhotoButton, .top))
     }
-    
-    @objc func addPhoto() {
-        cameraController.selectSourceAlert()
-    }
-
 }
 
 extension ResultsListViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
