@@ -51,7 +51,7 @@ final class ResultDetailsViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
 
         titleDateLabel.text = DateFormatter.localizedString(from: viewModel.result.createdOn, dateStyle: .full, timeStyle: .medium)
-        inputImage.image = viewModel.image
+        inputImage.image = viewModel.loadImage()
 
         resultTextView.text = viewModel.result.ocrText
 
