@@ -28,20 +28,18 @@ final class ResultsListViewController: UIViewController {
         CameraController(controller: self, delegate: self)
     }()
     
-    private lazy var addPhotoButton: UIButton = {
-        let button = UIButton(frame: CGRect(origin: .zero, size: Const.addButtonSize))
+    private lazy var addPhotoButton: RoundedButton = {
+        let button = RoundedButton(frame: CGRect(origin: .zero, size: Const.addButtonSize))
         button.setTitle("ADD", for: .normal)
-        
+
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        button.setTitleColor(.gray, for: .highlighted)
         button.setTitleColor(.white, for: .normal)
-        
-        button.backgroundColor = .red
-        button.layer.cornerRadius = 16
         
         button.contentVerticalAlignment = .center
         button.titleLabel?.baselineAdjustment = .alignCenters
         
-        button.addTarget(self, action: #selector(addPhoto), for: .touchUpInside)
+        button.addTarget(self, action: #selector(showAddSources), for: .touchUpInside)
         
         return button
     }()
