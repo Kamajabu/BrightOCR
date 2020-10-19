@@ -72,6 +72,15 @@ final class ResultsListViewController: UIViewController {
         tableView.delegate = self
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        addPhotoButton.updateColors()
+    }
+    
+    @objc func showAddSources() {
+        cameraController.selectSourceAlert()
+    }
+    
     private func addSubviews() {
         self.view.addSubview(addPhotoButton)
         self.view.addSubview(tableView)
