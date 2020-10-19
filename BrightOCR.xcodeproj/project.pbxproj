@@ -13,6 +13,9 @@
 		4A4748D0253D7DA500FAB0E0 /* MainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748CF253D7DA500FAB0E0 /* MainStore.swift */; };
 		4A4748D4253D7DE200FAB0E0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748D3253D7DE200FAB0E0 /* Coordinator.swift */; };
 		4A4748D7253D7E4600FAB0E0 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748D6253D7E4600FAB0E0 /* ApplicationCoordinator.swift */; };
+		4A4748DC253D7FC700FAB0E0 /* ResultsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748DB253D7FC700FAB0E0 /* ResultsListViewController.swift */; };
+		4A4748DF253D7FD200FAB0E0 /* ResultsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748DE253D7FD200FAB0E0 /* ResultsListViewModel.swift */; };
+		4A4748E2253D800400FAB0E0 /* ResultsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4748E1253D800400FAB0E0 /* ResultsListCoordinator.swift */; };
 		B1810F77461B81EC2AA60C47 /* Pods_BrightOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FC9F0BF611EB3027CD7ECB /* Pods_BrightOCR.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,9 @@
 		4A4748CF253D7DA500FAB0E0 /* MainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStore.swift; sourceTree = "<group>"; };
 		4A4748D3253D7DE200FAB0E0 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		4A4748D6253D7E4600FAB0E0 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		4A4748DB253D7FC700FAB0E0 /* ResultsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsListViewController.swift; sourceTree = "<group>"; };
+		4A4748DE253D7FD200FAB0E0 /* ResultsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsListViewModel.swift; sourceTree = "<group>"; };
+		4A4748E1253D800400FAB0E0 /* ResultsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsListCoordinator.swift; sourceTree = "<group>"; };
 		934C7590FA25E1A131B0EF31 /* Pods-BrightOCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrightOCR.debug.xcconfig"; path = "Target Support Files/Pods-BrightOCR/Pods-BrightOCR.debug.xcconfig"; sourceTree = "<group>"; };
 		952538D8731B64A2BB08EA07 /* Pods-BrightOCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrightOCR.release.xcconfig"; path = "Target Support Files/Pods-BrightOCR/Pods-BrightOCR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +69,7 @@
 		4A03DE53253D742A00912ED1 /* BrightOCR */ = {
 			isa = PBXGroup;
 			children = (
+				4A4748D9253D7F9100FAB0E0 /* Scenes */,
 				4A4748D2253D7DD000FAB0E0 /* Coordinator */,
 				4A4748CE253D7D9A00FAB0E0 /* Store */,
 				4A03DE54253D742A00912ED1 /* AppDelegate.swift */,
@@ -77,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				4A4748CF253D7DA500FAB0E0 /* MainStore.swift */,
-				4A4748D6253D7E4600FAB0E0 /* ApplicationCoordinator.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -86,8 +92,27 @@
 			isa = PBXGroup;
 			children = (
 				4A4748D3253D7DE200FAB0E0 /* Coordinator.swift */,
+				4A4748D6253D7E4600FAB0E0 /* ApplicationCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		4A4748D9253D7F9100FAB0E0 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4A4748DA253D7FB400FAB0E0 /* ResultsList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4A4748DA253D7FB400FAB0E0 /* ResultsList */ = {
+			isa = PBXGroup;
+			children = (
+				4A4748DB253D7FC700FAB0E0 /* ResultsListViewController.swift */,
+				4A4748DE253D7FD200FAB0E0 /* ResultsListViewModel.swift */,
+				4A4748E1253D800400FAB0E0 /* ResultsListCoordinator.swift */,
+			);
+			path = ResultsList;
 			sourceTree = "<group>";
 		};
 		89B12FA29360532F0BA82DB0 /* Pods */ = {
@@ -240,9 +265,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A4748D0253D7DA500FAB0E0 /* MainStore.swift in Sources */,
+				4A4748E2253D800400FAB0E0 /* ResultsListCoordinator.swift in Sources */,
 				4A03DE55253D742A00912ED1 /* AppDelegate.swift in Sources */,
 				4A4748D4253D7DE200FAB0E0 /* Coordinator.swift in Sources */,
+				4A4748DC253D7FC700FAB0E0 /* ResultsListViewController.swift in Sources */,
 				4A4748D7253D7E4600FAB0E0 /* ApplicationCoordinator.swift in Sources */,
+				4A4748DF253D7FD200FAB0E0 /* ResultsListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,8 @@ final class ApplicationCoordinator: Coordinator {
     private let mainStore = MainStore()
 
     private let rootViewController: UINavigationController
-    
+    private let resultsListCoordinator: ResultsListCoordinator
+
     private unowned let window: UIWindow
 
     init(window: UIWindow) {
@@ -19,6 +20,9 @@ final class ApplicationCoordinator: Coordinator {
 
         rootViewController = UINavigationController()
         rootViewController.navigationBar.prefersLargeTitles = false
+        
+        resultsListCoordinator = ResultsListCoordinator(parentViewController: rootViewController, mainStore: mainStore)
+        resultsListCoordinator.start()
     }
     
     func start() {
