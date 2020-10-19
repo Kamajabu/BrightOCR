@@ -20,6 +20,10 @@ final class ResultsListViewController: UIViewController {
     private let viewModel: ResultsListViewModel
     private let tableView = UITableView()
     
+    lazy var cameraController = {
+        CameraController(controller: self, delegate: self)
+    }()
+    
     private lazy var addPhotoButton: UIButton = {
         let button = UIButton(frame: CGRect(origin: .zero, size: Const.addButtonSize))
         button.setTitle("ADD", for: .normal)
@@ -74,8 +78,22 @@ final class ResultsListViewController: UIViewController {
                               Bottom(20).to(addPhotoButton, .top))
     }
     
-    @objc func addPhoto() {}
+    @objc func addPhoto() {
+        cameraController.selectSourceAlert()
+    }
+    
 
+}
+
+extension ResultsListViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        picker.dismiss(animated: true)
+        
+        guard let image = info[.editedImage] as? UIImage else {
+            // Add logger
+            return
+        }
+    }
 }
 
 extension ResultsListViewController: UITableViewDataSource, UITableViewDelegate {
