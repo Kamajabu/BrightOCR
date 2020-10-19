@@ -49,6 +49,7 @@ final class ResultDetailsViewController: UIViewController {
         self.viewModel = viewModel
 
         super.init(nibName: nil, bundle: nil)
+        view.backgroundColor = UIColor.adaptedColor(light: .white, dark: .black)
 
         titleDateLabel.text = DateFormatter.localizedString(from: viewModel.result.createdOn, dateStyle: .full, timeStyle: .medium)
         inputImage.image = viewModel.loadImage()
