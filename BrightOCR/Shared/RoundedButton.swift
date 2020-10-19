@@ -14,7 +14,8 @@ final class RoundedButton: UIButton {
         shapeLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 20).cgPath
         shapeLayer.fillColor = customBackgroundColor.cgColor
         
-        shapeLayer.borderColor = borderColor.cgColor
+        shapeLayer.strokeColor = borderColor.cgColor
+        shapeLayer.borderWidth = 2
         
         shapeLayer.shadowColor = UIColor.darkGray.cgColor
         shapeLayer.shadowPath = shapeLayer.path
@@ -38,7 +39,7 @@ final class RoundedButton: UIButton {
     
     func updateColors() {
         shapeLayer.fillColor = customBackgroundColor.cgColor
-        shapeLayer.borderColor = borderColor.cgColor
+        shapeLayer.strokeColor = borderColor.cgColor
     }
     
 }
