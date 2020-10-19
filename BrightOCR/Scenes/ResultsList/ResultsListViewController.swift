@@ -9,6 +9,8 @@ import EasyPeasy
 
 private extension ResultsListViewController {
     struct Const {
+        static let addButtonSize = CGSize(width: 120, height: 44)
+
         static let basicCellIdentifier = "resultsCell"
     }
 }
@@ -16,8 +18,25 @@ private extension ResultsListViewController {
 final class ResultsListViewController: UIViewController {
     
     private let viewModel: ResultsListViewModel
-    
     private let tableView = UITableView()
+    
+    private lazy var addPhotoButton: UIButton = {
+        let button = UIButton(frame: CGRect(origin: .zero, size: Const.addButtonSize))
+        button.setTitle("ADD", for: .normal)
+        
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        button.setTitleColor(.white, for: .normal)
+        
+        button.backgroundColor = .red
+        button.layer.cornerRadius = 16
+        
+        button.contentVerticalAlignment = .center
+        button.titleLabel?.baselineAdjustment = .alignCenters
+        
+        button.addTarget(self, action: #selector(addPhoto), for: .touchUpInside)
+        
+        return button
+    }()
     
     init(viewModel: ResultsListViewModel) {
         self.viewModel = viewModel
