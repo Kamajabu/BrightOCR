@@ -1,4 +1,8 @@
 <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="OmniNews_0"></a>BrightOCR</h1>
+
+**Important**: For the app to work firebase configuration file is required which is not included in the repo. If it wasn't sent to you by the author of this repository (it would be me ;) ) then you need to create one yourself. To do so please follow  <a href="https://firebase.google.com/docs/ios/setup">this link (step 1 - 3)</a>.
+
+PS Please remember about `pod install` :) 
 <table class="table table-striped table-bordered">
 <thead>
 <tr>
