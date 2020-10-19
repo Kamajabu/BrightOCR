@@ -63,6 +63,8 @@ final class ResultsListViewController: UIViewController {
         
         precondition(router != nil, "Router must be assigned.")
         
+        view.backgroundColor = UIColor.adaptedColor(light: .white, dark: .black)
+        
         addSubviews()
         setupLayout()
         
