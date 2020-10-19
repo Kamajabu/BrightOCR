@@ -73,6 +73,8 @@ final class ResultsListViewController: UIViewController {
                               Top(20).to(view.safeAreaLayoutGuide, .top),
                               Bottom(20).to(addPhotoButton, .top))
     }
+    
+    @objc func addPhoto() {}
 
 }
 
