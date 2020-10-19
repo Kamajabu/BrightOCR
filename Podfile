@@ -5,5 +5,5 @@ target 'BrightOCR' do
   use_frameworks!
 
   pod 'EasyPeasy', '~> 1.9'
-
+  pod 'SwiftLint'
 end

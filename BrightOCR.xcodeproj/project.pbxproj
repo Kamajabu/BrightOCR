@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -74,7 +74,6 @@
 				934C7590FA25E1A131B0EF31 /* Pods-BrightOCR.debug.xcconfig */,
 				952538D8731B64A2BB08EA07 /* Pods-BrightOCR.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -94,6 +93,7 @@
 			buildConfigurationList = 4A03DE65253D742C00912ED1 /* Build configuration list for PBXNativeTarget "BrightOCR" */;
 			buildPhases = (
 				4EFB15185BA9C1FD8E589F03 /* [CP] Check Pods Manifest.lock */,
+				4A03DE76253D79C400912ED1 /* SwiftLint Autocorrect */,
 				4A03DE4D253D742A00912ED1 /* Sources */,
 				4A03DE4E253D742A00912ED1 /* Frameworks */,
 				4A03DE4F253D742A00912ED1 /* Resources */,
@@ -169,6 +169,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BrightOCR/Pods-BrightOCR-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		4A03DE76253D79C400912ED1 /* SwiftLint Autocorrect */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Autocorrect";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect\n";
 		};
 		4EFB15185BA9C1FD8E589F03 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

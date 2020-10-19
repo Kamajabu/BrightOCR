@@ -1,0 +1,84 @@
+# SwiftLint version 0.11.1
+disabled_rules: # rule identifiers to exclude from running
+  - todo
+  - trailing_whitespace
+  - statement_position
+  - identifier_name
+opt_in_rules: # some rules are only opt-in
+  - empty_count
+  - force_unwrapping
+  - closure_spacing
+  - conditional_returns_on_newline
+  - nesting
+  - overridden_super_call
+  - redundant_nil_coalesing
+  - switch_case_on_newline
+  - todo
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Pods
+ # - Vendor
+ # - build
+
+# configurable rules can be customized from this configuration file
+# binary rules can set their severity level
+force_cast: warning
+force_try: warning
+force_unwrapping: warning
+shorthand_operator: warning
+statement_position:
+   statement_mode: uncuddled_else
+file_length:
+    warning: 400
+    error: 800
+identifier_name:
+  max_length:
+    warning: 55
+    error: 60
+  min_length:
+    warning: 3
+  excluded:
+    - url
+  validates_start_with_lowercase: false
+type_name:
+  max_length:
+    warning: 55
+    error: 60
+  min_length:
+    warning: 3
+  excluded:
+    - iPhone
+    - iPad
+type_body_length:
+   warning: 350
+   error: 900
+function_body_length:
+   warning: 50
+   error: 100
+function_parameter_count:
+   warning: 6
+   error: 8
+cyclomatic_complexity:
+   warning: 12
+   error: 20
+# custom rules follow. (here be regex dragons)
+custom_rules:
+   empty_line_after_super:
+      name: "Empty Line After Super"
+      regex: '(^ *super\.[ a-zA-Z0-9=?.\(\)\{\}:,><!]*\n *(?!(?:\}|return))\S+)'
+      message: "There should be an empty line after super"
+      severity: warning
+   unnecessary_type:
+      name: "Unnecessary Type"
+      regex: '[ a-zA-Z0-9]*(?:let|var) [ a-zA-Z0-9]*: ([a-zA-Z0-9]*)[\? ]*= \1'
+      message: "Type Definition Not Needed"
+      severity: warning
+   multiple_empty_lines:
+      name: "Multiple Empty Lines"
+      regex: '((?:\s*\n){3,})'
+      message: "There are too many line breaks"
+      severity: warning
+   empty_line_after_guard:
+      name: "Empty Line After Guard"
+      regex: '(^ *guard[ a-zA-Z0-9=?.\(\),><!]*\{[ a-zA-Z0-9=?.\(\),><!]*\}\n *(?!(?:return|guard))\S+)'
+      message: "There should be an empty line after a guard"
+      severity: warning
