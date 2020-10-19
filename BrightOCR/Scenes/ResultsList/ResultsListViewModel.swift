@@ -22,7 +22,7 @@ final class ResultsListViewModel {
         self.store = store
     }
     
-    func analyze(image: UIImage, completion: @escaping (Result<OCRResultModel, Error>)->()) {
+    func analyze(image: UIImage, completion: @escaping (Result<OCRResultModel, Error>) -> Void) {
         ocrEngine.performOCR(on: image) { [weak self] result in
             switch result {
             case let .failure(error):
