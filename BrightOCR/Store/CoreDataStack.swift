@@ -40,5 +40,15 @@ final class CoreDataStack {
             }
         }
     }
+    
+    func loadEntity<T: NSManagedObject>(entity: T.Type, uuid: String? = nil) throws -> [T] {
+        let fetchRequest = NSFetchRequest<T>(entityName: String(describing: entity))
+        
+        if let definedId = uuid {
+            fetchRequest.predicate = NSPredicate(format: "id == %@", definedId)
+        }
+        
+        return try managedObjectContext.fetch(fetchRequest)
+    }
 
 }
