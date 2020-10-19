@@ -10,11 +10,16 @@ import UIKit
 final class ResultDetailsViewModel {
     
     let result: OCRResultModel
-    let image: UIImage
+
+    private let mainStore: MainStore
      
-    init(result: OCRResultModel, image: UIImage) {
+    init(result: OCRResultModel, mainStore: MainStore) {
         self.result = result
-        self.image = image
+        self.mainStore = mainStore
+    }
+    
+    func loadImage() -> UIImage? {
+        return try? mainStore.imageStorage?.image(for: result.id)
     }
 
 }
