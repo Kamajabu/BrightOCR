@@ -23,5 +23,17 @@ final class CoreDataStack {
         })
         return container
     }()
+    
+    func saveContext() {
+        self.managedObjectContext.perform {
+            if self.managedObjectContext.hasChanges {
+                do {
+                    try self.managedObjectContext.save()
+                } catch {
+                    // Add logger
+                }
+            }
+        }
+    }
 
 }
