@@ -46,7 +46,7 @@ final class ResultsListViewController: UIViewController {
     
     init(viewModel: ResultsListViewModel) {
         self.viewModel = viewModel
-        
+                
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -56,6 +56,8 @@ final class ResultsListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        precondition(router != nil, "Router must be assigned.")
         
         addSubviews()
         setupLayout()
@@ -101,10 +103,7 @@ extension ResultsListViewController: UINavigationControllerDelegate, UIImagePick
             }
             
             self?.tableView.reloadData()
-            
-            let viewModel = ResultDetailsViewModel(result: model, image: image)
-            let viewController = ResultDetailsViewController(viewModel: viewModel)
-            self?.present(viewController, animated: true)
+            self?.router?.showResult(for: model)
         }
         
     }
@@ -128,6 +127,16 @@ extension ResultsListViewController: UITableViewDataSource, UITableViewDelegate 
         cell.detailTextLabel?.text = historyRecord.ocrText
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedIndex = indexPath.row
+        
+        guard let historyRecord = viewModel.historyRecord(for: selectedIndex) else {
+            return
+        }
+        
+        router?.showResult(for: historyRecord)
     }
     
 }
