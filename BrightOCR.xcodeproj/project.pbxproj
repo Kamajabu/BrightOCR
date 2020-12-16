@@ -52,8 +52,8 @@
 		4A4748F5253DC26800FAB0E0 /* FirebaseMLKitOCR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMLKitOCR.swift; sourceTree = "<group>"; };
 		4A4748F8253DC30E00FAB0E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A474913253DC59500FAB0E0 /* OCRResultData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OCRResultData.xcdatamodel; sourceTree = "<group>"; };
-		4A474922253DC66800FAB0E0 /* OCRResult+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OCRResult+CoreDataProperties.swift"; path = "/Users/Kamajabu/Documents/privateProjects/BrightOCR/clearRepo/BrightOCR/BrightOCR/Persistance/OCRResult+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		4A474923253DC66800FAB0E0 /* OCRResult+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OCRResult+CoreDataClass.swift"; path = "/Users/Kamajabu/Documents/privateProjects/BrightOCR/clearRepo/BrightOCR/BrightOCR/Persistance/OCRResult+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		4A474922253DC66800FAB0E0 /* OCRResult+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCRResult+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4A474923253DC66800FAB0E0 /* OCRResult+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCRResult+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4A474929253DC7B600FAB0E0 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		4A47492C253DC96200FAB0E0 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
 		4A474930253DDE5400FAB0E0 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 				4A474923253DC66800FAB0E0 /* OCRResult+CoreDataClass.swift */,
 				4A474922253DC66800FAB0E0 /* OCRResult+CoreDataProperties.swift */,
 			);
-			path = CoreDataSubclasses;
+			name = CoreDataSubclasses;
 			sourceTree = "<group>";
 		};
 		4A47492F253DDE3200FAB0E0 /* Shared */ = {
